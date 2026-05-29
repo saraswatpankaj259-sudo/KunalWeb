@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="sqbE-ZT9Suak_bH1G4WIYEnkk1wfZNIeX3LFh0O1wPg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KunalWeb - Professional Website Design in Mathura. Starting at ₹799. Fast delivery, mobile friendly websites for businesses.">
+    <title>KunalWeb - Professional Website Design Mathura</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #020010; color: white; overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
+
+        /* Particles */
+        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; }
+        .particle { position: absolute; width: 2px; height: 2px; background: #00d4ff; border-radius: 50%; opacity: 0; animation: floatUp 10s infinite; box-shadow: 0 0 6px #00d4ff; }
+        .particle:nth-child(1){left:5%;animation-delay:0s;}
+        .particle:nth-child(2){left:15%;animation-delay:2s;background:#a855f7;box-shadow:0 0 6px #a855f7;}
+        .particle:nth-child(3){left:30%;animation-delay:4s;}
+        .particle:nth-child(4){left:45%;animation-delay:1s;background:#a855f7;box-shadow:0 0 6px #a855f7;}
+        .particle:nth-child(5){left:60%;animation-delay:3s;}
+        .particle:nth-child(6){left:75%;animation-delay:5s;background:#a855f7;box-shadow:0 0 6px #a855f7;}
+        .particle:nth-child(7){left:88%;animation-delay:1.5s;}
+        .particle:nth-child(8){left:95%;animation-delay:3.5s;}
+        @keyframes floatUp{0%{transform:translateY(100vh) scale(0);opacity:0;}10%{opacity:0.6;}90%{opacity:0.2;}100%{transform:translateY(-100px) scale(1);opacity:0;}}
+
+        /* Header */
+        header {
+            background: rgba(2,0,16,0.97);
+            backdrop-filter: blur(20px);
+            padding: 0 5%; height: 65px;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 100;
+            border-bottom: 1px solid rgba(0,212,255,0.1);
+        }
+        .logo { font-size: 1.3rem; font-weight: 900; white-space: nowrap; }
+        .logo .k { color: #00d4ff; text-shadow: 0 0 15px rgba(0,212,255,0.6); }
+        .logo .w { color: #a855f7; text-shadow: 0 0 15px rgba(168,85,247,0.6); }
+        nav { display: flex; gap: 20px; }
+        nav a { color: #666; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        nav a:hover { color: #00d4ff; }
+        .owner-tag { background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(168,85,247,0.08)); border: 1px solid rgba(0,212,255,0.2); color: #00d4ff; font-size: 0.78rem; font-weight: bold; padding: 5px 12px; border-radius: 20px; white-space: nowrap; }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 100px 5% 80px; position: relative;
+            background: radial-gradient(ellipse at center, rgba(0,212,255,0.04) 0%, transparent 60%);
+        }
+        .glow-ring { width: 300px; height: 300px; border: 1px solid rgba(0,212,255,0.08); border-radius: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); animation: ringPulse 4s infinite; }
+        .glow-ring:nth-child(2){width:500px;height:500px;animation-delay:1.3s;border-color:rgba(168,85,247,0.05);}
+        .glow-ring:nth-child(3){width:700px;height:700px;animation-delay:2.6s;border-color:rgba(0,212,255,0.03);}
+        @keyframes ringPulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.8;}50%{transform:translate(-50%,-50%) scale(1.04);opacity:0.3;}}
+
+        .hero-content { max-width: 800px; position: relative; z-index: 1; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); color: #00d4ff; padding: 8px 20px; border-radius: 30px; font-size: 0.82rem; margin-bottom: 25px; animation: badgePulse 2s infinite; }
+        @keyframes badgePulse{0%,100%{box-shadow:0 0 0 rgba(0,212,255,0);}50%{box-shadow:0 0 15px rgba(0,212,255,0.2);}}
+        .hero-icon { font-size: 3.5rem; display: block; margin-bottom: 20px; animation: iconFloat 3s ease-in-out infinite; filter: drop-shadow(0 0 20px rgba(0,212,255,0.5)); }
+        @keyframes iconFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+        .hero h1 { font-size: 3.2rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px; background: linear-gradient(135deg, #ffffff 0%, #00d4ff 40%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 1.1rem; color: #666; margin-bottom: 40px; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn-glow { background: linear-gradient(135deg, #00d4ff, #0099cc); color: white; padding: 15px 38px; border-radius: 50px; font-weight: bold; font-size: 1rem; text-decoration: none; box-shadow: 0 0 30px rgba(0,212,255,0.4); transition: 0.3s; position: relative; overflow: hidden; }
+        .btn-glow::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); animation: shimmer 2.5s infinite; }
+        @keyframes shimmer{100%{left:100%;}}
+        .btn-glow:hover { transform: translateY(-3px); box-shadow: 0 0 50px rgba(0,212,255,0.6); }
+        .btn-out { background: transparent; color: white; border: 1px solid rgba(168,85,247,0.4); padding: 15px 38px; border-radius: 50px; font-weight: bold; font-size: 1rem; text-decoration: none; transition: 0.3s; }
+        .btn-out:hover { border-color: #a855f7; box-shadow: 0 0 20px rgba(168,85,247,0.3); }
+
+        /* Stats */
+        .stats { padding: 50px 5%; border-top: 1px solid rgba(0,212,255,0.08); border-bottom: 1px solid rgba(0,212,255,0.08); background: rgba(0,212,255,0.02); position: relative; z-index: 1; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 25px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .stat-item h3 { font-size: 2.8rem; font-weight: 900; background: linear-gradient(135deg, #00d4ff, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .stat-item p { color: #444; font-size: 0.85rem; margin-top: 5px; }
+
+        /* Sections */
+        .section { padding: 80px 5%; position: relative; z-index: 1; }
+        .section-dark { padding: 80px 5%; background: rgba(255,255,255,0.01); position: relative; z-index: 1; }
+        .sec-title { text-align: center; margin-bottom: 60px; }
+        .sec-tag { color: #00d4ff; font-size: 0.78rem; letter-spacing: 3px; text-transform: uppercase; display: block; margin-bottom: 10px; }
+        .sec-title h2 { font-size: 2.3rem; font-weight: 800; }
+        .sec-title p { color: #444; margin-top: 10px; }
+        .cyan-line { width: 60px; height: 3px; background: linear-gradient(90deg, #00d4ff, #a855f7); margin: 15px auto 0; border-radius: 2px; box-shadow: 0 0 10px rgba(0,212,255,0.4); }
+
+        /* Services */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 25px; }
+        .service-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 35px; transition: 0.4s; position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, #00d4ff, #a855f7); opacity: 0.6; animation: borderGlow 3s infinite; }
+        @keyframes borderGlow{0%,100%{opacity:0.4;}50%{opacity:1;}}
+        .service-card:hover { transform: translateY(-8px); border-color: rgba(0,212,255,0.2); box-shadow: 0 0 40px rgba(0,212,255,0.08); }
+        .s-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; filter: drop-shadow(0 0 10px rgba(0,212,255,0.4)); }
+        .service-card h3 { font-size: 1.2rem; color: white; margin-bottom: 10px; }
+        .service-card p { color: #555; font-size: 0.88rem; line-height: 1.7; margin-bottom: 15px; }
+        .feat-list { list-style: none; }
+        .feat-list li { color: #666; font-size: 0.85rem; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; gap: 8px; transition: 0.2s; }
+        .feat-list li:hover { color: #00d4ff; padding-left: 5px; }
+        .feat-list li::before { content: '▸'; color: #00d4ff; }
+
+        /* Pricing */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1050px; margin: 0 auto; }
+        .price-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 28px; padding: 45px 35px; text-align: center; transition: 0.4s; position: relative; overflow: hidden; }
+        .price-card::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at top, rgba(0,212,255,0.03), transparent 60%); pointer-events: none; }
+        .price-card:hover { transform: translateY(-10px); }
+        .price-card.popular { background: linear-gradient(135deg, rgba(0,212,255,0.07), rgba(168,85,247,0.07)); border-color: rgba(0,212,255,0.3); box-shadow: 0 0 50px rgba(0,212,255,0.1); }
+        .price-card.premium-plan { background: linear-gradient(135deg, rgba(168,85,247,0.07), rgba(0,212,255,0.07)); border-color: rgba(168,85,247,0.3); box-shadow: 0 0 50px rgba(168,85,247,0.1); }
+        .popular-tag { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #00d4ff, #a855f7); color: white; font-size: 0.73rem; font-weight: bold; padding: 5px 18px; border-radius: 20px; white-space: nowrap; box-shadow: 0 0 15px rgba(0,212,255,0.4); }
+        .premium-tag { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #a855f7, #7c3aed); color: white; font-size: 0.73rem; font-weight: bold; padding: 5px 18px; border-radius: 20px; white-space: nowrap; box-shadow: 0 0 15px rgba(168,85,247,0.4); }
+        .price-card h3 { font-size: 1.4rem; color: white; margin-bottom: 5px; }
+        .price-subtitle { color: #444; font-size: 0.82rem; margin-bottom: 20px; }
+        .old-price { color: #333; font-size: 1rem; text-decoration: line-through; margin-bottom: 5px; }
+        .price-amount { font-size: 3.5rem; font-weight: 900; background: linear-gradient(135deg, #00d4ff, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 8px; }
+        .save-badge { display: inline-block; background: rgba(0,255,100,0.08); border: 1px solid rgba(0,255,100,0.25); color: #00ff64; font-size: 0.72rem; padding: 3px 12px; border-radius: 15px; margin-bottom: 20px; }
+        .price-list { list-style: none; text-align: left; margin: 20px 0 25px; }
+        .price-list li { padding: 8px 0; color: #666; font-size: 0.88rem; border-bottom: 1px solid rgba(255,255,255,0.04); display: flex; align-items: center; gap: 8px; transition: 0.2s; }
+        .price-list li:hover { color: #00d4ff; }
+        .price-list li::before { content: '✓'; color: #00d4ff; font-weight: bold; }
+
+        /* Order Button */
+        .order-btn {
+            width: 100%; padding: 15px;
+            border: none; border-radius: 15px;
+            font-size: 1rem; font-weight: bold;
+            cursor: pointer; transition: 0.3s;
+            background: rgba(0,212,255,0.08);
+            color: #00d4ff;
+            border: 1px solid rgba(0,212,255,0.2);
+            position: relative; overflow: hidden;
+        }
+        .order-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); transition: 0.5s; }
+        .order-btn:hover::before { left: 100%; }
+        .price-card.popular .order-btn { background: linear-gradient(135deg, #00d4ff, #a855f7); color: white; border: none; box-shadow: 0 0 25px rgba(0,212,255,0.3); }
+        .price-card.premium-plan .order-btn { background: linear-gradient(135deg, #a855f7, #7c3aed); color: white; border: none; box-shadow: 0 0 25px rgba(168,85,247,0.3); }
+        .order-btn:hover { transform: scale(1.03); }
+
+        /* Reviews */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .review-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; padding: 25px; transition: 0.3s; }
+        .review-card:hover { border-color: rgba(0,212,255,0.15); }
+        .stars { color: #fbbf24; font-size: 1rem; margin-bottom: 12px; }
+        .review-text { color: #555; font-size: 0.88rem; line-height: 1.7; margin-bottom: 15px; font-style: italic; }
+        .reviewer { display: flex; align-items: center; gap: 12px; }
+        .r-av { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, #00d4ff, #a855f7); display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 0 12px rgba(0,212,255,0.3); }
+        .reviewer h4 { color: white; font-size: 0.88rem; }
+        .reviewer span { color: #444; font-size: 0.78rem; }
+
+        /* Contact */
+        .contact-sec { padding: 80px 5%; text-align: center; position: relative; z-index: 1; background: radial-gradient(ellipse at center, rgba(0,212,255,0.03) 0%, transparent 70%); }
+        .contact-sec h2 { font-size: 2.3rem; font-weight: 800; margin-bottom: 15px; }
+        .contact-sec > p { color: #444; margin-bottom: 50px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 18px; max-width: 750px; margin: 0 auto 40px; }
+        .c-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 18px; padding: 22px; transition: 0.3s; }
+        .c-card:hover { border-color: rgba(0,212,255,0.2); box-shadow: 0 0 20px rgba(0,212,255,0.05); transform: translateY(-3px); }
+        .c-icon { font-size: 1.8rem; margin-bottom: 8px; }
+        .c-card h4 { color: #00d4ff; margin-bottom: 4px; font-size: 0.9rem; }
+        .c-card p { color: #444; font-size: 0.82rem; }
+        .contact-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .ig-btn { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 15px 38px; border-radius: 50px; font-size: 0.95rem; font-weight: bold; text-decoration: none; box-shadow: 0 0 25px rgba(220,39,67,0.3); transition: 0.3s; }
+        .ig-btn:hover { transform: translateY(-3px); box-shadow: 0 0 40px rgba(220,39,67,0.5); }
+
+        /* Process */
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .process-step { text-align: center; padding: 32px 18px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); border-radius: 20px; transition: 0.3s; }
+        .process-step:hover { border-color: rgba(0,212,255,0.15); transform: translateY(-5px); }
+        .step-num { width: 65px; height: 65px; background: linear-gradient(135deg, #00d4ff, #a855f7); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 900; color: white; margin: 0 auto 18px; animation: stepGlow 3s infinite; }
+        .process-step:nth-child(2) .step-num{animation-delay:0.75s;}
+        .process-step:nth-child(3) .step-num{animation-delay:1.5s;}
+        .process-step:nth-child(4) .step-num{animation-delay:2.25s;}
+        @keyframes stepGlow{0%,100%{box-shadow:0 0 20px rgba(0,212,255,0.3);}50%{box-shadow:0 0 35px rgba(0,212,255,0.6);}}
+        .process-step h3 { color: white; margin-bottom: 8px; font-size: 1rem; }
+        .process-step p { color: #444; font-size: 0.84rem; line-height: 1.5; }
+
+        /* Float Button */
+        .float-ig { position: fixed; bottom: 25px; right: 25px; z-index: 999; width: 58px; height: 58px; background: linear-gradient(135deg, #f09433, #dc2743, #bc1888); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; text-decoration: none; box-shadow: 0 0 25px rgba(220,39,67,0.4); animation: floatBounce 2.5s ease-in-out infinite; }
+        @keyframes floatBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+        footer { background: #010008; border-top: 1px solid rgba(0,212,255,0.06); padding: 25px 5%; text-align: center; color: #333; font-size: 0.82rem; position: relative; z-index: 1; }
+        footer span { color: #00d4ff; }
+    </style>
+</head>
+<body>
+
+<div class="particles">
+    <div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div>
+</div>
+
+<header>
+    <div class="logo"><span class="k">Kunal</span><span class="w">Web</span></div>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="owner-tag">👨‍💻 Owner: Kunal Saraswat</div>
+</header>
+
+<section class="hero">
+    <div class="glow-ring"></div>
+    <div class="glow-ring"></div>
+    <div class="glow-ring"></div>
+    <div class="hero-content">
+        <div class="hero-badge">🏆 Mathura Ka #1 Web Programmer</div>
+        <span class="hero-icon">💻</span>
+        <h1>Professional Website<br>Design At Best Price</h1>
+        <p>Apni business ki website banwao — Fast, Beautiful & Mobile Friendly!<br>Sirf ₹799 se shuru — 24 ghante mein delivery!</p>
+        <div class="hero-btns">
+            <a href="#pricing" class="btn-glow">💰 Pricing Dekho</a>
+            <a href="#contact" class="btn-out">📲 Contact Karo</a>
+        </div>
+    </div>
+</section>
+
+<div class="stats">
+    <div class="stats-grid">
+        <div class="stat-item"><h3>1K+</h3><p>Orders Complete</p></div>
+        <div class="stat-item"><h3>24hr</h3><p>Fast Delivery</p></div>
+        <div class="stat-item"><h3>100%</h3><p>Satisfaction</p></div>
+        <div class="stat-item"><h3>₹799</h3><p>Se Shuru</p></div>
+        <div class="stat-item"><h3>3+</h3><p>Saal Experience</p></div>
+    </div>
+</div>
+
+<section class="section" id="services">
+    <div class="sec-title">
+        <span class="sec-tag">— Our Services —</span>
+        <h2>Kya Kya Banate Hain?</h2>
+        <p>Har business ke liye perfect website solution</p>
+        <div class="cyan-line"></div>
+    </div>
+    <div class="services-grid">
+        <div class="service-card">
+            <span class="s-icon">🏪</span>
+            <h3>Business Website</h3>
+            <p>Apni dukan ya business ki professional website banwao!</p>
+            <ul class="feat-list">
+                <li>Mobile Friendly Design</li>
+                <li>Contact Form</li>
+                <li>Google Maps</li>
+                <li>WhatsApp Button</li>
+                <li>Fast Loading</li>
+            </ul>
+        </div>
+        <div class="service-card">
+            <span class="s-icon">🛒</span>
+            <h3>Online Shop</h3>
+            <p>Online products becho — UPI payment ke saath!</p>
+            <ul class="feat-list">
+                <li>Product Listing</li>
+                <li>UPI Payment</li>
+                <li>WhatsApp Order</li>
+                <li>Beautiful Design</li>
+                <li>Stock Info</li>
+            </ul>
+        </div>
+        <div class="service-card">
+            <span class="s-icon">👨‍💼</span>
+            <h3>Portfolio Site</h3>
+            <p>Apna kaam dikhao — jobs aur clients ke liye!</p>
+            <ul class="feat-list">
+                <li>Skills Section</li>
+                <li>Projects Gallery</li>
+                <li>Resume Download</li>
+                <li>Social Links</li>
+                <li>Contact Form</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section-dark" id="pricing">
+    <div class="sec-title">
+        <span class="sec-tag">— Pricing Plans —</span>
+        <h2>Humari Pricing</h2>
+        <p>Sabse sasti aur best quality — koi hidden charges nahi!</p>
+        <div class="cyan-line"></div>
+    </div>
+    <div class="pricing-grid">
+
+        <!-- Basic Plan -->
+        <div class="price-card">
+            <h3>🌱 Basic</h3>
+            <p class="price-subtitle">Choti business ke liye</p>
+            <p class="old-price">₹1000</p>
+            <div class="price-amount">₹799</div>
+            <div class="save-badge">✂️ ₹201 Bachao!</div>
+            <ul class="price-list">
+                <li>Simple Website</li>
+                <li>1 Page</li>
+                <li>Mobile Friendly</li>
+                <li>Contact Info</li>
+                <li>WhatsApp Button</li>
+                <li>24hr Delivery</li>
+            </ul>
+            <button class="order-btn" onclick="window.open('https://www.instagram.com/hanuman__52?igsh=MTlhaTEzdGdwaHBpZA==')">📸 Instagram Pe Order Karo</button>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="price-card popular">
+            <div class="popular-tag">⭐ Sabse Popular</div>
+            <h3>🔥 Standard</h3>
+            <p class="price-subtitle">Growing business ke liye</p>
+            <p class="old-price">₹2000</p>
+            <div class="price-amount">₹1499</div>
+            <div class="save-badge">✂️ ₹501 Bachao!</div>
+            <ul class="price-list">
+                <li>Professional Website</li>
+                <li>3-5 Pages</li>
+                <li>UPI Payment</li>
+                <li>WhatsApp Button</li>
+                <li>Photo Gallery</li>
+                <li>Contact Form</li>
+                <li>SEO Optimization</li>
+                <li>48hr Delivery</li>
+            </ul>
+            <button class="order-btn" onclick="window.open('https://www.instagram.com/hanuman__52?igsh=MTlhaTEzdGdwaHBpZA==')">📸 Instagram Pe Order Karo</button>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="price-card premium-plan">
+            <div class="premium-tag">💎 Premium</div>
+            <h3>👑 Premium</h3>
+            <p class="price-subtitle">Full business ke liye</p>
+            <p class="old-price">₹4000</p>
+            <div class="price-amount">₹2999</div>
+            <div class="save-badge">✂️ ₹1001 Bachao!</div>
+            <ul class="price-list">
+                <li>Full Website</li>
+                <li>5+ Pages</li>
+                <li>UPI Payment</li>
+                <li>Online Shop</li>
+                <li>Custom Design</li>
+                <li>Free Updates</li>
+                <li>Priority Support</li>
+                <li>Google Analytics</li>
+                <li>72hr Delivery</li>
+            </ul>
+            <button class="order-btn" onclick="window.open('https://www.instagram.com/hanuman__52?igsh=MTlhaTEzdGdwaHBpZA==')">📸 Instagram Pe Order Karo</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="reviews">
+    <div class="sec-title">
+        <span class="sec-tag">— Client Reviews —</span>
+        <h2>1000+ Khush Clients</h2>
+        <p>Unke words mein hamara kaam</p>
+        <div class="cyan-line"></div>
+    </div>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Bahut badhiya kaam! Meri shop ki website 24 ghante mein ready. Ekdum professional!"</p>
+            <div class="reviewer"><div class="r-av">R</div><div><h4>Ramesh Kumar</h4><span>Kirana Store, Mathura</span></div></div>
+        </div>
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Parlour ki website bahut sundar banayi. UPI payment bhi add kiya. Best service!"</p>
+            <div class="reviewer"><div class="r-av">P</div><div><h4>Priya Sharma</h4><span>Beauty Parlour, Agra</span></div></div>
+        </div>
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"₹799 mein itni achhi website! Bahut value for money. Sach mein best!"</p>
+            <div class="reviewer"><div class="r-av">M</div><div><h4>Mohan Lal</h4><span>Dhaba Owner, Vrindavan</span></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-sec" id="contact">
+    <h2>📲 Abhi Order Karo!</h2>
+    <p>Instagram pe DM karo — free consultation bilkul free!</p>
+    <div class="contact-grid">
+        <div class="c-card"><div class="c-icon">📸</div><h4>Instagram</h4><p>DM karke order karo</p></div>
+        <div class="c-card"><div class="c-icon">⚡</div><h4>Fast Reply</h4><p>1 ghante mein jawab</p></div>
+        <div class="c-card"><div class="c-icon">🆓</div><h4>Free Consult</h4><p>Bilkul free!</p></div>
+        <div class="c-card"><div class="c-icon">📍</div><h4>Location</h4><p>Mathura, UP</p></div>
+    </div>
+    <div class="contact-btns">
+        <a href="https://www.instagram.com/hanuman__52?igsh=MTlhaTEzdGdwaHBpZA==" class="ig-btn">📸 Instagram Pe Order Karo</a>
+    </div>
+</section>
+
+<section class="section-dark">
+    <div class="sec-title">
+        <span class="sec-tag">— Our Process —</span>
+        <h2>Hum Kaise Kaam Karte Hain?</h2>
+        <p>Sirf 4 steps mein website ready!</p>
+        <div class="cyan-line"></div>
+    </div>
+    <div class="process-grid">
+        <div class="process-step"><div class="step-num">1</div><h3>Instagram DM Karo</h3><p>Apni requirements batao</p></div>
+        <div class="process-step"><div class="step-num">2</div><h3>Details Bhejo</h3><p>Business info aur logo bhejo</p></div>
+        <div class="process-step"><div class="step-num">3</div><h3>Payment Karo</h3><p>UPI se advance payment</p></div>
+        <div class="process-step"><div class="step-num">4</div><h3>Site Live! 🎉</h3><p>24-72 ghante mein ready!</p></div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 <span>KunalWeb</span> | Saraswat Web Programmer | All Rights Reserved</p>
+</footer>
+
+<a href="https://www.instagram.com/hanuman__52?igsh=MTlhaTEzdGdwaHBpZA==" class="float-ig">📸</a>
+
+</body>
+</html>
